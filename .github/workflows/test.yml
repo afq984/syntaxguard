@@ -18,7 +18,7 @@ jobs:
           - [3.7, ubuntu]
           - [3.8, ubuntu]
           - [3.9, ubuntu]
-          - ['3.10', ubuntu]
+          - ['3.10.0-alpha - 3.10', ubuntu]
 
     steps:
       - uses: actions/checkout@v2
