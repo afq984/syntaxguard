@@ -4,21 +4,21 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ${{ matrix.environment[1] }}-latest
+    runs-on: ${{ matrix.environment[1] }}
     strategy:
       fail-fast: false
       matrix:
         environment:
-          - [2.7, ubuntu]
-          - [3.2, windows]
-          - [3.3, ubuntu]
-          - [3.4, ubuntu]
-          - [3.5, ubuntu]
-          - [3.6, ubuntu]
-          - [3.7, ubuntu]
-          - [3.8, ubuntu]
-          - [3.9, ubuntu]
-          - ['3.10.0-alpha - 3.10', ubuntu]
+          - [2.7, ubuntu-20.04]
+          - [3.2, windows-latest]
+          - [3.3, ubuntu-18.04]
+          - [3.4, ubuntu-18.04]
+          - [3.5, ubuntu-20.04]
+          - [3.6, ubuntu-20.04]
+          - [3.7, ubuntu-20.04]
+          - [3.8, ubuntu-20.04]
+          - [3.9, ubuntu-20.04]
+          - ['3.10.0-alpha - 3.10', ubuntu-20.04]
 
     steps:
       - uses: actions/checkout@v2
