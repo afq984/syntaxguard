@@ -10,8 +10,6 @@ jobs:
       matrix:
         environment:
           - [2.7, ubuntu-latest]
-          - ['3.0', windows-latest]
-          - [3.1, windows-latest]
           - [3.2, windows-latest]
           - [3.3, ubuntu-latest]
           - [3.4, ubuntu-latest]
@@ -20,7 +18,7 @@ jobs:
           - [3.7, ubuntu-latest]
           - [3.8, ubuntu-latest]
           - [3.9, ubuntu-latest]
-          - [3.10, ubuntu-latest]
+          - ['3.10', ubuntu-latest]
 
     steps:
       - uses: actions/checkout@v2
