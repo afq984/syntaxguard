@@ -40,7 +40,7 @@ template = '''
         else:
             with self.assertRaises(SyntaxError) as ctx:
                 import pyXY
-            self.assertLooseMessage(ctx.exception.text, 'Please use Python X.Y')
+            self.assertLooseMessage(ctx.exception.text, 'Please use Python X.Y or later')
 '''
 
 

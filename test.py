@@ -25,7 +25,7 @@ class TestVersionChecks(unittest.TestCase):
         else:
             with self.assertRaises(SyntaxError) as ctx:
                 import py30
-            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.0')
+            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.0 or later')
 
     def test33(self):
         if sys.version_info >= (3, 3):
@@ -33,7 +33,7 @@ class TestVersionChecks(unittest.TestCase):
         else:
             with self.assertRaises(SyntaxError) as ctx:
                 import py33
-            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.3')
+            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.3 or later')
 
     def test35(self):
         if sys.version_info >= (3, 5):
@@ -41,7 +41,7 @@ class TestVersionChecks(unittest.TestCase):
         else:
             with self.assertRaises(SyntaxError) as ctx:
                 import py35
-            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.5')
+            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.5 or later')
 
     def test36(self):
         if sys.version_info >= (3, 6):
@@ -49,7 +49,7 @@ class TestVersionChecks(unittest.TestCase):
         else:
             with self.assertRaises(SyntaxError) as ctx:
                 import py36
-            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.6')
+            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.6 or later')
 
     def test38(self):
         if sys.version_info >= (3, 8):
@@ -57,7 +57,7 @@ class TestVersionChecks(unittest.TestCase):
         else:
             with self.assertRaises(SyntaxError) as ctx:
                 import py38
-            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.8')
+            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.8 or later')
 
     def test39(self):
         if sys.version_info >= (3, 9):
@@ -65,7 +65,7 @@ class TestVersionChecks(unittest.TestCase):
         else:
             with self.assertRaises(SyntaxError) as ctx:
                 import py39
-            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.9')
+            self.assertLooseMessage(ctx.exception.text, 'Please use Python 3.9 or later')
 
 
 if __name__ == '__main__':
